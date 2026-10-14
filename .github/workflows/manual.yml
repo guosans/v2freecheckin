@@ -43,14 +43,15 @@ jobs:
         
     - name: Checkin
       run: |
-        echo "USER 长度: ${#user}"
-        echo "PWD  长度: ${#pwd}"
+        
         user='${{ secrets.USER }}'
         pwd='${{ secrets.PWD }}'
         remail='${{secrets.remail}}'        
         semail='${{secrets.semail}}'
         secode='${{secrets.secode}}'
-        
+
+        echo "USER 长度: ${#user}"
+        echo "PWD  长度: ${#pwd}"
         user_list=()
         pwd_list=()
         IFS=","
