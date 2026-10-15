@@ -39,9 +39,7 @@ def main(usr, pw):
     try:
         login_result = resp.json()
     except ValueError:
-        return usr + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        + " 登录失败，状态码: " + str(resp.status_code)
-        + " 返回内容: " + resp.text[:500]
+        return usr + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + " 登录失败，状态码: " + str(resp.status_code) + " 返回内容: " + resp.text[:500]
     if login_result.get("ret") != 1:
         return usr + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + " 登录失败：" + str(login_result.get("msg", resp.text))
 
