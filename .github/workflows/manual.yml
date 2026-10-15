@@ -52,6 +52,7 @@ jobs:
 
         echo "USER 长度: ${#user}"
         echo "PWD  长度: ${#pwd}"
+        echo "USER 首尾字符: [${user:0:1}]...[${user: -1}]"
         user_list=()
         pwd_list=()
         IFS=","
